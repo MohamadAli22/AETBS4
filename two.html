@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="En">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Edit Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles/style.css">
+
+	</head>
+	<body>
+
+
+		<ul class="nav nav-tabs"> <!-- tabs starts -->
+			<li class="nav-item">
+				<a onclick="navigation('upload2')" href="#one" class="nav-link ">Upload</a>
+			</li>
+			<li class="nav-item">
+				<a href="#two" class="nav-link btn active">Edit</a>
+			</li>
+			<li class="nav-item">
+				<a onclick="navigation('export2')" href="#three" class="nav-link btn ">Export</a>
+			</li>
+		</ul> <!-- tabs ends -->
+
+		<div class="container">
+			<div class="row">
+				<div class="col col-10 ">
+				  	<h1 class="display-1"> Edit </h1>
+				  	<br>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col align-content-center col-md-12 col-lg-12 col-xl-12" id="container">
+				</div> <!-- chart ends -->
+
+				</div> 
+
+			<br>
+							<audio id="myAudio">
+                               <source src="//Users//mohamadali//Desktop//a.mp3" type="audio/mpeg">
+                            </audio>
+
+
+
+
+					<div class="row">
+						<div class="offset-3 col align-content-center  col-md-1 col-lg-1 col-xl-1" >
+							<!-- todo mohsen   -->
+							<a href="javascript:void(0)" onclick="playmusic()" data-toggle="tooltip" data-placement="bottom" title="play" class="btn btn-outline-primary btn-cta btn-block " href=""><i class="fa fa-play "></i></a>
+
+						</div> 
+						<div class="padding-0 col align-content-center  col-md-1 col-lg-1 col-xl-1" >
+							<!-- todo mohsen   -->
+							<a href="javascript:void(0)" onclick = "pausemusic()" data-toggle="tooltip" data-placement="bottom" title="pause" class=" btn btn-outline-primary btn-cta btn-block"><i class="fa fa-pause"></i></a>
+
+						</div> 
+						<div data-toggle="tooltip" data-placement="bottom" title="forward" class="padding-0 col align-content-center  col-md-1 col-lg-1 col-xl-1" >
+							<!-- todo mohsen   -->
+							<a href="javascript:void(0)" class="btn btn-outline-primary btn-cta btn-block"><i class="fa fa-step-forward"></i></a>
+
+						</div> 
+						<div data-toggle="tooltip" data-placement="bottom" title="backward" class="padding-0 col align-content-center  col-md-1 col-lg-1 col-xl-1" >
+							<!-- todo mohsen   -->
+							<a href="javascript:void(0)" class="btn btn-outline-primary btn-cta btn-block "><i class="fa fa-step-backward"></i></a>
+
+						</div> 
+						<div data-toggle="tooltip" data-placement="bottom" title="deselect" class="padding-0 col align-content-center  col-md-1 col-lg-1 col-xl-1" >
+							<!-- todo mohsen   -->
+							<a onclick="removPth()" href="javascript:void(0)"  id="deselect" class="btn btn-primary btn-cta btn-block disabled"><i  class="fa fa-window-close"></i></a>
+
+						</div> 
+						<div class="padding-0 col align-content-center  col-md-1 col-lg-1 col-xl-1" data-toggle="tooltip" data-placement="bottom" title="trash">
+							<a href="javascript:void(0)"  id="trash" class="btn btn-primary btn-cta btn-block disabled"><i class="fa fa-trash"></i></a>
+
+						</div> 
+					</div><!-- btns first row ends -->
+
+			<br>
+
+				  	
+				<div class="row">
+			   		<div class="col col-2  text-center">
+				  	<h1 class="">Effects</h1>
+				  	  </div>
+             	</div>
+
+
+
+       		<div class="row" >  
+
+       		     <div class =" padding-00 col col-3 " >    			
+
+    					<div class="card-img-top col-12  mask flex-center rgba-green-slight">
+    					<img class="card-img-top img-fluid" src="img/noise.png" alt="Card image cap">
+        				<h4 class="card-footer text-center">Noise Reduction </h4>
+   						</div>
+   				</div>		
+   				 <div class ="padding-00 col col-3" >    			
+
+    					<div class="card-img-top col-12  mask flex-center rgba-green-slight">
+    					<img class="card-img-top img-fluid" src="img/mute.png" alt="Card image cap">
+        				<h4 class="card-footer text-center">Mute Speaker</h4>
+   						</div>
+   				</div>
+   				 <div class ="padding-00 col col-3" >    			
+
+    					<div class="card-img-top col-12  mask flex-center rgba-green-slight">
+    					<img class="card-img-top img-fluid" src="img/decrease.png" alt="Card image cap">
+        				<h4 class="card-footer text-center">Volume Decrease </h4>
+   						</div>
+   				</div>
+   				 <div class ="padding-00 col col-3" >    			
+
+    					<div class="card-img-top col-12  mask flex-center rgba-green-slight" onclick="inc()">
+    					<img class="card-img-top img-fluid" src="img/increase.png" alt="Card image cap">
+        				<h4 class="card-footer text-center">Volume Increase </h4>
+   						</div>
+   				</div>		   			   					   			   					   			   			
+
+           </div>
+           <br>
+           <br>
+
+		</div>
+		<footer class="footer bg-white">
+			<p class="muted credit text-center "> designed at University of Isfahan by WE.</p>
+		</footer>
+                         <script >
+							
+
+
+                            var x = document.getElementById("myAudio"); 
+
+                            function playmusic() { 
+                              x.play(); 
+                            } 
+
+                           function pausemusic() { 
+                              x.pause(); 
+                           } 
+                            function navigation(arg1){
+                                 if(arg1 == "export2")
+                                 {
+                                    window.location.href = 'three.html';
+                                 }
+                                 else if (arg1 == "upload2")
+                                 {
+                                    window.location.href = 'one.html';
+                                 }
+                            }                           
+                         
+                         	function mkThemEn(){
+								var element = document.getElementById("trash");
+								element.classList.remove('disabled');
+
+								element = document.getElementById("deselect");
+								element.classList.remove('disabled'); 
+                         	}
+
+                         	function mkThemDe(){
+								var element = document.getElementById("trash");
+								element.classList.add('disabled');
+
+								element = document.getElementById("deselect");
+								element.classList.add('disabled');
+                         	}
+
+                         </script>	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="js/graph.js"></script>
+
+	</body>
+</html>
